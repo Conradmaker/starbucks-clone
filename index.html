@@ -51,6 +51,8 @@
       integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q=="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous">
+    </script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
@@ -564,7 +566,7 @@
     </section>
 
     <!-- SEASON PRODUCT -->
-    <div class="season-product">
+    <section class="season-product scroll-spy">
       <div class="inner">
         <img
           src="./images/floating3.png"
@@ -574,43 +576,43 @@
         <img
           src="./images/season_product_image.png"
           alt="PRODUCT"
-          class="product"
+          class="product back-to-position to-right delay-0"
         />
         <div class="text-group">
-          <img src="./images/season_product_text1.png" alt="" class="title" />
-          <img src="./images/season_product_text2.png" alt="" class="desc" />
-          <div class="more">
+          <img src="./images/season_product_text1.png" alt="" class="title back-to-position to-left delay-1" />
+          <img src="./images/season_product_text2.png" alt="" class="desc back-to-position to-left delay-2" />
+          <div class="more back-to-position to-left delay-3">
             <a href="javascript:void(0)" class="btn">자세히 보기</a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- RESERVE COFFEE -->
-    <section class="reserve-coffee">
+    <section class="reserve-coffee scroll-spy">
       <div class="inner">
         <img
           src="./images/reserve_logo.png"
           alt="reserve-logo"
-          class="reserve-logo"
+          class="reserve-logo back-to-position to-right delay-0"
         />
         <div class="text-group">
-          <img src="./images/reserve_text.png" alt="" class="reserve-text" />
-          <div class="more">
-            <a href="javascript:void(0)" class="btn btn--gold">자세히 보기</a>
+          <img src="./images/reserve_text.png" alt="" class="reserve-text back-to-position to-right delay-1" />
+          <div class="more back-to-position to-right delay-2"> 
+            <a href="javascript:void(0)" class="btn btn--gold ">자세히 보기</a>
           </div>
         </div>
-        <img src="./images/reserve_image.png" alt="" class="product" />
+        <img src="./images/reserve_image.png" alt="" class="product back-to-position to-left delay-3" />
       </div>
     </section>
 
     <!-- PICK YOUR FAVORITE -->
-    <section class="pick-your-favorite">
+    <section class="pick-your-favorite scroll-spy">
       <div class="inner">
         <div class="text-group">
-          <img src="./images/favorite_text1.png" alt="title" class="title" />
-          <img src="./images/favorite_text2.png" alt="desc" class="desc" />
-          <div class="more">
+          <img src="./images/favorite_text1.png" alt="title" class="title back-to-position to-right delay-0" />
+          <img src="./images/favorite_text2.png" alt="desc" class="desc back-to-position to-right delay-1" />
+          <div class="more back-to-position to-right delay-2">
             <a href="javascript:void(0)" class="btn btn--white">자세히 보기</a>
           </div>
         </div>
@@ -627,6 +629,23 @@
           <div class="back">
             <img src="./images/reserve_store_medal_back.png" alt="">
             <a href="javascript:void()" class="btn">매장안내</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIND THE STORE -->
+    <section class="find-store scroll-spy">
+      <div class="inner">
+        <img src="./images/find_store_texture1.png" class="texture1" alt=""> 
+        <img src="./images/find_store_texture2.png" class="texture2" alt="">
+        <img src="./images/find_store_picture1.jpg" class="picture picture1 back-to-position to-right delay-0" alt="">
+        <img src="./images/find_store_picture2.jpg" class="picture picture2 back-to-position to-right delay-1" alt="">
+        <div class="text-group">
+          <img src="./images/find_store_text1.png" class="title back-to-position to-left delay-0" alt="">
+          <img src="./images/find_store_text2.png" class="desc back-to-position to-left delay-1" alt="">
+          <div class="more back-to-position to-left delay-2">
+            <a href="javascript:void()" class="btn">매장찾기</a>
           </div>
         </div>
       </div>
