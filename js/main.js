@@ -20,23 +20,9 @@ const utils = {
     };
   },
 };
-const searchEl = document.querySelector(".search");
-const searchInputEl = searchEl.querySelector("input");
-
-searchEl.addEventListener("click", () => {
-  searchInputEl.focus();
-});
-searchInputEl.addEventListener("focus", () => {
-  searchEl.classList.add("focused");
-  searchInputEl.setAttribute("placeholder", "통합검색");
-});
-searchInputEl.addEventListener("blur", () => {
-  searchEl.classList.remove("focused");
-  searchInputEl.removeAttribute("placeholder", "통합검색");
-});
 
 const badgeEl = document.querySelector("header .badges");
-const toTopEl = document.querySelector('#to-top');
+const toTopEl = document.querySelector("#to-top");
 
 window.addEventListener(
   "scroll",
@@ -47,32 +33,31 @@ window.addEventListener(
       document.documentElement.scrollTop ||
       document.body.scrollTop;
 
-    if(scrollTop > 500){
-       gsap.to(badgeEl, 0.6, {
-          opacity: 0,
-          display: "none",
-        });
-        gsap.to(toTopEl, 0.2, {
-          x: 0,
-        })
-      }else{
-        gsap.to(badgeEl, 0.6, {
-          opacity: 1,
-          display: "block",
-        });
-        gsap.to(toTopEl, 0.2, {
-          x: 100,
-        })
-      }
-       
+    if (scrollTop > 500) {
+      gsap.to(badgeEl, 0.6, {
+        opacity: 0,
+        display: "none",
+      });
+      gsap.to(toTopEl, 0.2, {
+        x: 0,
+      });
+    } else {
+      gsap.to(badgeEl, 0.6, {
+        opacity: 1,
+        display: "block",
+      });
+      gsap.to(toTopEl, 0.2, {
+        x: 100,
+      });
+    }
   }, 300)
 );
 
-toTopEl.addEventListener('click',()=>{
+toTopEl.addEventListener("click", () => {
   gsap.to(window, 0.7, {
-    scrollTo:0
-  })
-})
+    scrollTo: 0,
+  });
+});
 
 const fadeEls = document.querySelectorAll(".visual .fade-in");
 fadeEls.forEach((el, index) => {
@@ -106,16 +91,16 @@ new Swiper(".promotion .swiper-container", {
   },
 });
 
-new Swiper('.awards .swiper-container',{
-  autoplay:true,
-  loop:true,
-  spaceBetween:30,
-  slidesPerView:5,
-  navigation:{
-    prevEl:'.awards .swiper-prev',
-    nextEl:'.awards .swiper-next'
-  }
-})
+new Swiper(".awards .swiper-container", {
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+  navigation: {
+    prevEl: ".awards .swiper-prev",
+    nextEl: ".awards .swiper-next",
+  },
+});
 
 const promotionEl = document.querySelector(".promotion");
 const promotionToggleBtn = document.querySelector(".toggle-promotion");
@@ -143,16 +128,12 @@ floatingObject(".floating1", 1, 15);
 floatingObject(".floating2", 0.5, 15);
 floatingObject(".floating3", 1.5, 20);
 
-const spyEls = document.querySelectorAll('section.scroll-spy');
-spyEls.forEach((spyEl)=>{
-  new ScrollMagic
-    .Scene({
-      triggerElement:spyEl, //보여짐 여부 감시할 요소
-      triggerHook: .8 //viewport의 .8높이에 걸리면 setClassToggle()
-    })
-    .setClassToggle(spyEl,'show')
+const spyEls = document.querySelectorAll("section.scroll-spy");
+spyEls.forEach((spyEl) => {
+  new ScrollMagic.Scene({
+    triggerElement: spyEl, //보여짐 여부 감시할 요소
+    triggerHook: 0.8, //viewport의 .8높이에 걸리면 setClassToggle()
+  })
+    .setClassToggle(spyEl, "show")
     .addTo(new ScrollMagic.Controller());
-})
-
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear()
+});
